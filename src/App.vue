@@ -1,37 +1,16 @@
-<script setup lang="ts">
-import TheWelcome from "./components/TheWelcome.vue";
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">Add a new user</div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <a-layout :class="styles.layout">
+    <a-layout-header :class="styles.header">
+      <h1 :class="styles.headerText">Add a new user</h1>
+    </a-layout-header>
+    <a-layout-content :class="styles.content">
+      <AddUserForm />
+    </a-layout-content>
+    <a-layout-footer :class="styles.footer"> kkkrv ©2023</a-layout-footer>
+  </a-layout>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-header {
-  width: 100%;
-  height: 220px;
-  margin: 0 auto;
-  padding: 12px 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e5e5e5;
-}
-
-header .wrapper {
-  max-width: 864px;
-  font-size: 24px;
-  display: flex;
-  color: #bfbfbf;
-}
-</style>
+<script setup lang="ts">
+import AddUserForm from "@/components/add-user-form/AddUserForm.vue";
+import styles from "./styles/layout.module.less";
+</script>
