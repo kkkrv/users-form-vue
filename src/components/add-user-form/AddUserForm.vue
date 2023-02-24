@@ -27,20 +27,15 @@
           type="primary"
           html-type="submit"
           :loading="userStore.isLoading"
-          label="Add"
-        />
+        >
+          Add
+        </AppButton>
       </a-form-item>
     </a-form>
 
-    <AppAlert
-      v-if="userStore.success"
-      message="User was added successfully"
-      type="success"
-    />
-    <AppAlert
-      v-else-if="userStore.error"
-      :message="userStore.error"
-      type="error"
+    <StatusNotification
+      :is-success="userStore.success"
+      :error="userStore.error"
     />
   </div>
 </template>
@@ -55,7 +50,7 @@ import AppButton from "@/library/button/AppButton.vue";
 import { useUserStore } from "@/stores/users";
 import type { FormStateModel } from "@/models/form.model";
 import styles from "./add-user-form.module.less";
-import AppAlert from "@/library/alert/AppAlert.vue";
+import StatusNotification from "@/components/status-notification/StatusNotification.vue";
 
 const userStore = useUserStore();
 
