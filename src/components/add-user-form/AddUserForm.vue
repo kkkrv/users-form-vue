@@ -7,7 +7,7 @@
       v-bind="layout"
       validateTrigger="blur"
       @finish="handleFinish"
-      @fieldsChange="resetStatus"
+      @change="resetStatus"
       :class="styles.userForm"
     >
       <PersonalInformation
