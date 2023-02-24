@@ -28,5 +28,3 @@ import AppInput from "@/library/input/AppInput.vue";
 defineProps(["companyCatchPhrase", "companyName"]);
 defineEmits(["update:companyCatchPhrase", "update:companyName"]);
 </script>
-
-<styles scoped></styles>

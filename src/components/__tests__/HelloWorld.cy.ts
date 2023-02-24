@@ -1,4 +1,4 @@
-import TheWelcome from "../TheWelcome.vue";
+import TheWelcome from "@/library/button/AppButton.vue";
 
 describe("test1", () => {
   it("playground", () => {
