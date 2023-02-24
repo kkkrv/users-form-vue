@@ -44,7 +44,7 @@
     label="Phone number"
     name="phone"
     :rules="[
-      { required: true, message: 'Please input your phone.' },
+      { required: true, message: 'Please input your phone number.' },
       {
         pattern: /^[+49][0-9 ]{13}/,
         message: 'Enter a valid phone number.',
