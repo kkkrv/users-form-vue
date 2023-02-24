@@ -1,10 +1,14 @@
 <template>
   <AppAlert
-    v-if="isSuccess"
+    v-if="!!isSuccess"
     message="User was added successfully"
     type="success"
   />
-  <AppAlert v-else-if="error" :message="error" type="error" />
+  <AppAlert
+    v-else-if="!!error"
+    :message="`Error occurred: ${error}`"
+    type="error"
+  />
 </template>
 
 <script setup lang="ts">
